@@ -1,0 +1,20 @@
+@MinimalAPIWithOData_HostAddress = http://localhost:5212
+
+GET {{MinimalAPIWithOData_HostAddress}}/customers/
+Accept: application/json
+
+###
+
+GET {{MinimalAPIWithOData_HostAddress}}/odata/customers?top=5
+Accept: application/json
+
+###
+
+GET {{MinimalAPIWithOData_HostAddress}}/odata/customers?$filter=startswith(name,%20%27Michael%27)
+Accept: application/json
+
+###
+
+GET {{MinimalAPIWithOData_HostAddress}}/odata/customers?$filter=name%20eq%20%27John%20Doe%27
+
+###
